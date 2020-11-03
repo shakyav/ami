@@ -4,7 +4,6 @@
         "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}",
         "aws_prod_id": "{{env `AWS_PROD_ID`}}",
         "aws_region": "{{env `AWS_REGION`}}",
-        "aws_vpc": "{{env `AWS_REGION`}}",
         "subnet_id": "",
         "source_ami": "ami-0817d428a6fb68645",
         "ssh_username": "ubuntu"
@@ -41,11 +40,16 @@
             ],"inline": [
                 "sudo apt-get update",
                 "sudo apt-get install curl",
-                "curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh",
+                "curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh",
                 "sudo bash nodesource_setup.sh",
                 "sudo apt install nodejs -y",
                 "node -v",
-                "npm -v"
+                "npm -v",
+                "sudo apt-get install ruby -y",
+                "cd /home/ubuntu",
+                "wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install",
+                "chmod +x ./install",
+                "sudo ./install auto"
                 
                 
             ]

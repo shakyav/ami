@@ -27,6 +27,13 @@
 
     The packer Image built with the above script "ami.json" will have nodejs already installed
 
+# Provisioners
+   This AMI installs the following tools 
+    1. Nodejs
+    2. curl utility
+    3. Installs Ruby which is a depedency for AWS Code Deploy Agent
+    4. AWS Code Deploy Agent
+
     
 
 
