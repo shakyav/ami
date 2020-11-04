@@ -1,9 +1,5 @@
 # ami
 
-#demo
-
-
-
 # Steps to run packer build in your system
 
         1. install packer using following steps on fedora
@@ -31,6 +27,7 @@
 # Provisioners
 
    This AMI installs the following tools 
+   
         1. Nodejs
 
         2. curl utility
