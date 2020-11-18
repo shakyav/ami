@@ -1,5 +1,6 @@
 # ami
 # a6 demo
+# a7 demo
 
 # Steps to run packer build in your system
 
