@@ -1,11 +1,16 @@
 # This is a basic workflow to trigger packer buil on merge commit into main branch
 
 
-name: Run packer build
+name: Run packer build on commit merge and maually using workflow dispatch
+# Controls when the action will run. 
 on:
+  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches:
-        - 'main'
+    branches: [ main ]
+
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 jobs:
   packer_build:
     runs-on: ubuntu-latest
